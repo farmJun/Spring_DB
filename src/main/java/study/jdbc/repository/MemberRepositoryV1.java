@@ -12,7 +12,6 @@ import javax.sql.DataSource;
 import org.springframework.jdbc.support.JdbcUtils;
 
 import lombok.extern.slf4j.Slf4j;
-import study.jdbc.connection.DBConnectionUtil;
 import study.jdbc.domain.Member;
 
 @Slf4j
