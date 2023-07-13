@@ -33,14 +33,7 @@ public class MemberServiceV2 {
         Member fromMember = memberRepository.findById(con, fromId);
         Member toMember = memberRepository.findById(con, toId);
         memberRepository.update(con, fromId, fromMember.getMoney() - money);
-        validation(toMember);
         memberRepository.update(con, toId, toMember.getMoney() + money);
-    }
-
-    private void validation(Member toMember) {
-        if (toMember.getMemberId().equals("ex")) {
-            throw new IllegalStateException("이체중 예외 발생");
-        }
     }
 
     private void release(Connection con) {
