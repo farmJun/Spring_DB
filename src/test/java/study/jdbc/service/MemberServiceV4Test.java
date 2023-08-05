@@ -14,6 +14,7 @@ import study.jdbc.domain.Member;
 import study.jdbc.repository.MemberRepository;
 import study.jdbc.repository.MemberRepositoryV4_1;
 import study.jdbc.repository.MemberRepositoryV4_2;
+import study.jdbc.repository.MemberRepositoryV5;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
@@ -50,7 +51,7 @@ class MemberServiceV4Test {
 
         @Bean
         MemberRepository memberRepository() {
-            return new MemberRepositoryV4_2(dataSource);
+            return new MemberRepositoryV5(dataSource);
         }
 
         @Bean
